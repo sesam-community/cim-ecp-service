@@ -1,0 +1,20 @@
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Build CIM Service!
+  displayName: 'Build the CIM service'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'sesam-rd-docker-registry'
+    repository: 'sesamrd/cimservice'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      latest

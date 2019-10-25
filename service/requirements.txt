@@ -1,0 +1,5 @@
+python-qpid-proton==0.28.0
+xmltodict==0.12.0
+Flask==1.0.2
+CherryPy==10.2.1
+Requests==2.22.0

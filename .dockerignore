@@ -1,0 +1,6 @@
+tmp/
+README.md
+.git/
+*.yml
+.gitignore
+service/.env
